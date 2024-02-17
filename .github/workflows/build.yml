@@ -21,15 +21,15 @@ jobs:
       - name: Run linter
         run: npm run lint
 
-      # - name: Start database
-      #   run: npm run db:start
-      # - name: Wait for database to be ready
-      #   run: sleep 20
-      # - name: Apply migrations to database
-      #   run: npx prisma migrate deploy
-      # - name: Run tests
-      #   run: npm run test
-      # - name: Run e2e tests
-      #   run: npm run test:e2e
-      # - name: Shutdown database
-      #   run: npm run db:stop
+      - name: Start database
+        run: npm run db:start
+      - name: Wait for database to be ready
+        run: sleep 20
+      - name: Apply migrations to database
+        run: npx prisma migrate deploy
+      - name: Run tests
+        run: npm run test
+      - name: Run e2e tests
+        run: npm run test:e2e
+      - name: Shutdown database
+        run: npm run db:stop
